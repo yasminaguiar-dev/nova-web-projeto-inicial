@@ -1,0 +1,31 @@
+/* CSS externo - Box Model */
+
+body {
+    background-color: #FFFDF9;
+    font-family: Arial, sans-serif;
+}
+
+/* Card principal */
+.card {
+    width: 500px;
+    height: 200px;
+
+    padding: 20px;
+
+    border: 2px solid #C98291;
+
+    margin: 10px auto;
+
+    box-shadow: 2px 2px 8px #ccc;
+}
+
+/* Segunda seção */
+.informacoes {
+    width: 500px;
+
+    padding: 20px;
+
+    border: 1px solid #EDE1D3;
+
+    margin: 20px auto;
+}

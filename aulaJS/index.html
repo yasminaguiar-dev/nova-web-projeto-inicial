@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Introdução ao JavaScript</title>
+
+</head>
+
+<body>
+
+    <h1>Minha primeira página com JavaScript</h1>
+
+    <p id="mensagem">
+        Clique no botão para alterar esta mensagem.
+    </p>
+
+    <button onclick="alterarMensagem()">
+        Clique aqui
+    </button>
+
+    <script>
+
+        function alterarMensagem() {
+
+            document.getElementById("mensagem").innerHTML =
+                "Olá! Este texto foi alterado usando JavaScript.";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
