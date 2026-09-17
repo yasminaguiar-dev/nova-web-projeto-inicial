@@ -1,41 +1,344 @@
-/* Seletor universal */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-* {
+body {
     margin: 0;
-    padding: 0;
+    background-color: #EDE1D3;
+    color: #3F3537;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
+/* CABEÇALHO */
 
-/* Seletor de classe */
+header {
+    background-color: #C98291;
+    padding: 15px 5%;
+    border-bottom: 1px solid #EDE1D3;
+}
 
-.titulo {
-    color: #c98291;
+.logo {
+    display: inline-block;
+    width: 25%;
+    vertical-align: middle;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+}
+
+nav {
+    display: inline-block;
+    width: 45%;
     text-align: center;
-    margin: 20px;
+    vertical-align: middle;
 }
-
-
-/* Seletor de ID */
-
-#descricao {
-    font-size: 22px;
-    margin: 20px;
-}
-
-
-/* Seletor de classe */
-
-.paragrafo-simples {
-    font-size: 18px;
-    margin: 15px 20px;
-}
-
-
-/* Seletor descendente */
 
 nav a {
-    color: #8b4f5c;
+    margin: 0 10px;
+    color: white;
     text-decoration: none;
-    margin: 20px;
-    font-size: 18px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #EDE1D3;
+}
+
+.icones {
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.icones img {
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+}
+
+/* TÍTULOS */
+
+h1,
+h2,
+h3 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: normal;
+}
+
+/* BANNER */
+
+.banner {
+    width: 90%;
+    margin: 25px auto;
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+    width: 90%;
+    margin: 50px auto;
+}
+
+/* PRODUTOS */
+
+.produtos {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+}
+
+.produtos h2 {
+    font-size: 34px;
+    color: #C98291;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.produtos .subtitulo {
+    text-align: center;
+    font-size: 16px;
+    color: #3F3537;
+    margin-bottom: 25px;
+}
+
+/* CARDS */
+
+.card {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin: 1%;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #EDE1D3;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #C98291;
+    font-weight: 600;
+}
+
+.card a {
+    display: inline-block;
+    background-color: #C98291;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.card a:hover {
+    background-color: #3F3537;
+}
+
+/* PÁGINA DE PRODUTOS */
+
+.pagina-produtos {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.pagina-produtos .card {
+    width: 20%;
+}
+
+/* LATERAL */
+
+aside {
+    display: inline-block;
+    vertical-align: top;
+    width: 23%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+aside h2 {
+    font-size: 20px;
+}
+
+aside input {
+    width: 85%;
+    padding: 10px;
+    border: 1px solid #D8C9BC;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+aside a {
+    color: #3F3537;
+    text-decoration: none;
+}
+
+aside a:hover {
+    color: #C98291;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+    background-color: #C98291;
+    color: white;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 30px;
+    color: white;
+}
+
+.newsletter form {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    width: auto;
+    margin: 10px;
+}
+
+.newsletter label {
+    margin-right: 5px;
+}
+
+.newsletter input {
+    width: 230px;
+    height: 25px;
+    padding: 8px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.newsletter button {
+    height: 41px;
+    padding: 0 20px;
+    margin-left: 5px;
+    background-color: #3F3537;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+}
+
+.newsletter button:hover {
+    background-color: #5A4A4D;
+}
+
+/* CONTATO */
+
+.contato {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 30px;
+}
+
+.formulario {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.formulario h2 {
+    font-size: 30px;
+}
+
+.formulario form {
+    background-color: white;
+    border: 1px solid #EDE1D3;
+    padding: 25px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.formulario input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #EDE1D3;
+    border-radius: 5px;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.formulario textarea {
+    width: 80%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #EDE1D3;
+    border-radius: 5px;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.formulario button {
+    background-color: #C98291;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #C98291;
+    color: white;
+    border-top: 1px solid #EDE1D3;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+footer div {
+    display: inline-block;
+    vertical-align: top;
+    width: 28%;
+    margin: 10px;
+}
+
+.logo-rodape img {
+    width: 80px;
+    height: auto;
+}
+
+footer h2 {
+    color: white;
+}
+
+footer h3 {
+    color: white;
+}
+
+footer p {
+    font-family: 'Poppins', Arial, sans-serif;
 }

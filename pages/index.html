@@ -1,95 +1,211 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
-    <!-- O head contém informações sobre a página, como o título e a configuração de caracteres. -->
-
     <meta charset="UTF-8">
-
-    <!-- Título da página -->
-    <title>Meu Portfólio</title>
-
-    <!-- Ligação com o arquivo CSS externo -->
+    <title>NOVA - Moda Feminina</title>
     <link rel="stylesheet" href="estilo.css">
-
 </head>
 
 <body>
 
-    <!-- MENU DE NAVEGAÇÃO -->
+    <header>
 
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-    </nav>
+        <div class="logo">
+            <img src="../assets/images/logo_NOVA.png" alt="Logo NOVA">
+        </div>
 
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
 
-    <!-- BLOCO 2: TÍTULOS E PARÁGRAFOS -->
+        <div class="icones">
+            <img src="../assets/icons/pesquisar.svg" alt="Pesquisar">
+            <img src="../assets/icons/usuario.svg" alt="Usuário">
+            <img src="../assets/icons/compras.svg" alt="Carrinho">
+        </div>
 
-    <h1 class="titulo">Meu Portfólio</h1>
-
-    <h2 style="color:rgb(221, 0, 255);">
-        Sobre Mim
-    </h2>
-
-    <h3 style="text-align:center;">
-        Minha Biografia
-    </h3>
-
-    <p id="descricao">
-        Meu nome é Yasmin. Sou estudante e estou aprendendo sobre desenvolvimento
-        de sistemas, programação e criação de páginas web. Gosto de aprender
-        coisas novas e desenvolver meus conhecimentos na área de tecnologia.
-    </p>
-
-    <p class="paragrafo-simples">
-        Este parágrafo utiliza a fonte Arial, conforme solicitado na atividade.
-    </p>
-
-    <p class="paragrafo-simples">
-        Este parágrafo possui o tamanho da fonte alterado para 20 pixels.
-    </p>
-
-    <p class="paragrafo-simples">
-        Este parágrafo possui uma cor de fundo diferente para demonstrar o uso
-        do atributo background-color.
-    </p>
+    </header>
 
 
-    <!-- BLOCO 5: IMAGENS E MULTIMÍDIA -->
+    <main>
 
-    <h2>Imagem</h2>
+        <section class="banner">
 
-    <!-- Imagem com texto alternativo, largura de 200px e borda de 5px -->
-    <img 
-        src="imagem.jpg" 
-        alt="Descrição da imagem" 
-        width="200"
-        style="border:5px solid black;"
-    >
+            <img src="../assets/images/banner_NOVA.png"
+                alt="Banner da loja NOVA">
 
-    <br><br>
+        </section>
 
 
-    <!-- Texto deslizante -->
-    <marquee direction="right" scrollamount="10">
-        Bem-vindo ao meu portfólio!
-    </marquee>
+        <div class="conteudo">
 
-    <br><br>
+            <section class="produtos">
+
+                <h2>Produtos em destaque</h2>
+
+                <p class="subtitulo">
+                    Confira algumas das peças favoritas da NOVA.
+                </p>
 
 
-    <h2>Vídeo</h2>
+                <div class="card">
 
-    <!-- Vídeo com controles, largura, altura e reprodução automática -->
-    <video width="400" height="300" controls autoplay muted>
+                    <img src="../assets/images/vestido_NOVA.jpg"
+                        alt="Vestido">
 
-        <!-- Caminho do arquivo de vídeo -->
-        <source src="video.mp4" type="video/mp4">
+                    <h3>Vestido</h3>
 
-        Seu navegador não suporta a reprodução de vídeos.
-    </video>
+                    <p>R$ 129,90</p>
+
+                    <a href="produtos.html">Ver produto</a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="../assets/images/blusa_NOVA.jpg"
+                        alt="Blusa">
+
+                    <h3>Blusa</h3>
+
+                    <p>R$ 79,90</p>
+
+                    <a href="produtos.html">Ver produto</a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="../assets/images/saia_NOVA.jpg"
+                        alt="Saia">
+
+                    <h3>Saia</h3>
+
+                    <p>R$ 99,90</p>
+
+                    <a href="produtos.html">Ver produto</a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="../assets/images/acessorios_NOVA.jpg"
+                        alt="Acessórios">
+
+                    <h3>Acessórios</h3>
+
+                    <p>R$ 59,90</p>
+
+                    <a href="produtos.html">Ver produto</a>
+
+                </div>
+
+            </section>
+
+
+            <aside>
+
+                <h2>Buscar produtos</h2>
+
+                <input type="text" placeholder="Buscar...">
+
+
+                <h2>Categorias</h2>
+
+                <ul>
+                    <li><a href="produtos.html">Vestidos</a></li>
+                    <li><a href="produtos.html">Blusas</a></li>
+                    <li><a href="produtos.html">Saias</a></li>
+                    <li><a href="produtos.html">Acessórios</a></li>
+                    <li><a href="produtos.html">Sapatos</a></li>
+                    <li><a href="produtos.html">Calças</a></li>
+                </ul>
+
+
+                <h2>Promoção</h2>
+
+                <p>
+                    Frete grátis em compras acima de R$ 199,00.
+                </p>
+
+            </aside>
+
+        </div>
+
+
+        <section class="newsletter">
+
+            <h2>Receba nossas novidades!</h2>
+
+            <p>
+                ❤︎
+            </p>
+
+            <form>
+
+                <label for="email">E-mail:</label>
+
+                <input type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail">
+
+                <button type="submit">
+                    Cadastrar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="logo-rodape">
+
+            <img src="../assets/images/logo_NOVA.png"
+                alt="Logo NOVA">
+
+            <p>
+                Loja de roupas femininas.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Institucional</h3>
+
+            <p>Início</p>
+            <p>Produtos</p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Atendimento</h3>
+
+            <p>WhatsApp: (19) 99999-9999</p>
+            <p>contato@nova.com</p>
+
+        </div>
+
+
+        <p>
+            © 2026 NOVA
+        </p>
+
+    </footer>
 
 </body>
 
