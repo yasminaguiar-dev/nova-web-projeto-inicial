@@ -4,149 +4,341 @@
 
 ### Labels vs. Placeholders
 
-As **labels** devem ser utilizadas para identificar de forma clara o que deve ser preenchido em cada campo. O placeholder serve apenas como uma orientação ou exemplo de preenchimento.
+A **label** é responsável por identificar de forma clara a finalidade de um campo de formulário. Ela deve permanecer visível para que o usuário saiba qual informação deve ser inserida.
 
-Não é recomendado utilizar o placeholder como substituto da label, pois o texto desaparece quando o usuário começa a digitar. Isso pode dificultar a identificação do campo e prejudicar a acessibilidade, principalmente para usuários que precisam de mais tempo para preencher o formulário.
+O **placeholder** funciona como uma orientação complementar ou exemplo de preenchimento. Ele não deve ser utilizado como substituto da label, pois desaparece quando o usuário começa a digitar. Isso pode dificultar a identificação do campo e a correção de informações. O W3C recomenda fornecer labels ou instruções para que o usuário saiba qual informação deve inserir.
 
-Na tela de login, serão utilizadas labels como **"E-mail"** e **"Senha"**, mantendo a identificação dos campos sempre visível.
+Na tela de login do Nova-Web, serão utilizadas labels visíveis:
 
-### Hierarquia Visual
+* **E-mail**
+* **Senha**
 
-A hierarquia visual ajuda o usuário a identificar quais ações são mais importantes na tela.
+Os placeholders serão utilizados somente como exemplos, como:
 
-O botão **Primary**, representado pela ação **"Entrar"**, terá maior destaque visual, pois é a principal ação da tela de login.
-
-As ações secundárias, como **"Esqueci minha senha"** e **"Criar conta"**, terão um destaque visual menor, utilizando textos ou botões com aparência secundária.
-
-Dessa forma, o usuário consegue identificar rapidamente a ação principal sem confundir as diferentes opções disponíveis.
+* `Digite seu e-mail`
+* `Digite sua senha`
 
 ---
 
-## 2. Estados de Validação dos Campos de Entrada (Input States)
+### Hierarquia Visual
 
-Os campos de entrada terão diferentes estados visuais para informar ao usuário a situação atual do preenchimento.
+A hierarquia visual organiza os elementos de acordo com seu nível de importância.
 
-### Default (Padrão)
+Na tela de login, o botão **Primary**, representado pela ação **"Entrar"**, terá maior destaque visual porque representa a principal ação que o usuário deve realizar.
 
-O campo terá uma **borda neutra**, fundo claro e uma label visível. Esse será o estado inicial do campo antes de o usuário interagir com ele.
+As ações secundárias, como **"Esqueci minha senha"** e **"Criar conta"**, terão menor destaque visual.
 
-### Focus (Foco)
+Essa diferença ajuda o usuário a compreender rapidamente a função de cada elemento e evita que ações secundárias concorram visualmente com a ação principal.
 
-Quando o usuário selecionar o campo, ele receberá um **destaque visual**, como uma alteração na cor da borda ou um anel de foco.
+No projeto Nova-Web, o botão principal utilizará a cor rosa queimado da identidade visual, enquanto as ações secundárias terão uma aparência mais discreta.
 
-Esse destaque ajuda o usuário a identificar qual campo está ativo no momento.
+---
 
-### Error (Erro)
+## 2. Estados de Validação dos Campos de Entrada
 
-Quando houver um preenchimento incorreto, o campo terá a **borda em tom vermelho** e será apresentada uma mensagem explicativa abaixo do campo.
+Os campos de entrada possuirão diferentes estados visuais para indicar ao usuário sua situação durante a interação.
+
+### Default — Padrão
+
+É o estado inicial do campo, antes de qualquer interação.
+
+Características escolhidas:
+
+* Borda neutra;
+* Fundo claro;
+* Label visível;
+* Texto legível;
+* Espaçamento adequado.
+
+Esse estado representa um campo disponível para preenchimento.
+
+---
+
+### Focus — Foco
+
+O estado Focus aparece quando o usuário seleciona ou navega até um campo.
+
+Características escolhidas:
+
+* Alteração na cor da borda;
+* Destaque visual utilizando a cor rosa queimado;
+* Indicador de foco claramente visível.
+
+O indicador de foco é importante para usuários que navegam utilizando o teclado, pois permite identificar visualmente qual elemento está selecionado. As diretrizes WCAG recomendam que elementos que recebem foco pelo teclado possuam um indicador de foco visível.
+
+---
+
+### Error — Erro
+
+O estado Error será utilizado quando uma informação estiver incorreta ou quando houver algum problema no preenchimento.
+
+Características escolhidas:
+
+* Borda em tom vermelho;
+* Mensagem explicativa abaixo do campo;
+* Texto de erro claro;
+* Indicador visual adicional além da cor.
 
 Exemplo:
 
 > E-mail ou senha inválidos.
 
-A mensagem deverá informar o problema de maneira clara, ajudando o usuário a corrigi-lo.
+A mensagem deve explicar o problema de maneira objetiva para ajudar o usuário a corrigir o preenchimento.
 
-### Success (Sucesso)
+---
 
-Quando o campo for preenchido corretamente, será apresentado um **indicador visual de sucesso**, como uma alteração na cor da borda ou um ícone de confirmação.
+### Success — Sucesso
 
-Esse estado informa ao usuário que o preenchimento foi aceito.
+O estado Success será utilizado quando o campo tiver sido preenchido corretamente.
 
-### Disabled (Desabilitado)
+Características escolhidas:
 
-Quando um campo ou botão estiver indisponível, será utilizado um **contraste reduzido**, deixando claro que o elemento não pode ser utilizado naquele momento.
+* Indicador visual de sucesso;
+* Alteração na borda;
+* Possibilidade de utilização de um ícone de confirmação;
+* Mensagem de apoio quando necessário.
 
-O elemento continuará identificável, mas terá uma aparência visual diferente dos elementos ativos.
+O objetivo é informar ao usuário que o preenchimento foi aceito.
+
+---
+
+### Disabled — Desabilitado
+
+O estado Disabled será utilizado quando um campo ou botão estiver temporariamente indisponível.
+
+Características escolhidas:
+
+* Contraste visual reduzido;
+* Aparência diferente dos elementos ativos;
+* Indicação clara de que o elemento não está disponível para interação.
+
+Mesmo desabilitado, o elemento deverá continuar identificável.
 
 ---
 
 ## 3. Padrões de Acessibilidade
 
-A tela de login deverá seguir boas práticas de acessibilidade para facilitar a utilização por diferentes usuários.
-
 ### Contraste de Cores
 
-As cores utilizadas para textos, campos e botões deverão apresentar contraste suficiente entre o primeiro plano e o fundo.
+As cores utilizadas na interface devem possuir contraste suficiente para facilitar a leitura.
 
-Será buscado o contraste mínimo recomendado pelas diretrizes **WCAG**, garantindo que os textos e informações importantes sejam fáceis de visualizar.
+De acordo com a **WCAG 2.2**, o contraste mínimo recomendado para texto normal é de **4,5:1**. Para textos grandes, o mínimo é de **3:1**.
 
-Além da cor, os estados de erro e sucesso também utilizarão mensagens ou indicadores visuais, evitando depender somente da diferença de cores.
+No Nova-Web, a combinação entre fundo, textos, campos e botões deverá ser verificada para garantir que as informações importantes permaneçam legíveis.
+
+Além disso, informações de erro e sucesso não dependerão somente da cor. Também serão utilizadas mensagens e outros indicadores visuais.
+
+---
+
+### Labels e Instruções
+
+Os campos devem apresentar informações que permitam ao usuário compreender o que precisa ser preenchido.
+
+Por isso, a tela utilizará labels visíveis acima dos campos:
+
+* E-mail;
+* Senha.
+
+Essa escolha melhora a compreensão do formulário e também contribui para a acessibilidade. O W3C recomenda fornecer labels ou instruções quando o usuário precisa inserir informações.
+
+---
 
 ### Navegação por Teclado
 
-Os elementos da tela deverão seguir uma ordem lógica de navegação utilizando a tecla **Tab**.
+A interface deverá permitir uma navegação lógica utilizando a tecla **Tab**.
 
-O usuário deverá conseguir acessar os campos de e-mail e senha, o checkbox, os links e o botão de login sem precisar utilizar o mouse.
+A ordem esperada de navegação será:
+
+1. Campo de e-mail;
+2. Campo de senha;
+3. Opção "Lembrar de mim";
+4. Link "Esqueci minha senha";
+5. Botão "Entrar";
+6. Link "Criar conta".
+
+Os elementos que receberem foco deverão possuir um indicador visual.
+
+---
 
 ### Leitores de Tela
 
-Os campos deverão possuir labels claras e informações compreensíveis para usuários que utilizam leitores de tela.
+Os campos devem possuir labels claras para que sua finalidade seja compreendida por usuários que utilizam leitores de tela.
 
-As mensagens de erro também deverão explicar de forma objetiva o problema encontrado, permitindo que o usuário entenda o que precisa ser corrigido.
+As mensagens de erro também devem ser objetivas e informar o problema encontrado.
 
----
-
-## 4. Estrutura da Tela de Login
-
-A tela de login do projeto Nova-Web será composta pelos seguintes elementos:
-
-* Logotipo ou nome da aplicação;
-* Título da tela;
-* Campo de e-mail/usuário;
-* Campo de senha;
-* Opção para exibir ou ocultar a senha;
-* Checkbox "Lembrar de mim";
-* Link "Esqueci minha senha";
-* Botão principal "Entrar";
-* Divisor visual para outras formas de acesso;
-* Opção para criar uma conta.
-
-A interface seguirá a identidade visual definida para o projeto Nova-Web, mantendo uma aparência simples, organizada e consistente.
+A interface não deve depender exclusivamente de cores ou elementos visuais para transmitir informações importantes.
 
 ---
 
-## 5. Componentes e Variantes no Figma
+# 4. Design System do Formulário
 
-No Figma serão criados componentes reutilizáveis para a tela de login.
+## Componente de Input
 
-### Componente de Input
+O componente de Input será criado utilizando **Auto Layout** no Figma.
 
-O componente de campo de texto possuirá as seguintes variantes:
+O Auto Layout permite organizar os elementos de forma automática, controlando direção, espaçamento, preenchimento e alinhamento. Ele também facilita a adaptação do componente quando o conteúdo é alterado.
+
+O componente possuirá as seguintes variantes:
 
 * Default;
 * Focus;
 * Error;
 * Success.
 
-Cada variante apresentará o estado visual correspondente e poderá possuir um texto de apoio ou mensagem de erro.
+Cada estado apresentará uma alteração visual correspondente.
 
-### Componente de Botão
+---
 
-O componente de botão possuirá:
+## Componente de Botão
 
-**Tipo:**
+Será criado um componente reutilizável de botão.
 
-* Primary;
-* Secondary/Outline.
+O componente possuirá dois tipos:
 
-**Estado:**
+### Primary
+
+Utilizado para a ação principal:
+
+**Entrar**
+
+### Secondary
+
+Utilizado para ações secundárias:
+
+**Criar conta**
+
+ou
+
+**Esqueci minha senha**
+
+Os botões também possuirão estados:
 
 * Default;
 * Hover;
 * Disabled.
 
-O botão Primary será utilizado para a ação principal **"Entrar"**, enquanto o botão Secondary será utilizado para ações de menor prioridade.
+---
+
+## Componentes e Variantes
+
+Componentes são elementos reutilizáveis que ajudam a manter a consistência visual de um projeto. No Figma, um componente principal pode possuir instâncias reutilizáveis em diferentes partes do design.
+
+As variantes permitem organizar diferentes versões de um mesmo componente, como diferentes estados e tipos de botões ou campos.
+
+No projeto Nova-Web, os componentes serão utilizados para evitar a criação manual repetida dos mesmos elementos e para manter uma aparência consistente.
 
 ---
 
-## 6. Protótipo Interativo
+# 5. Estrutura da Tela de Login
 
-O protótipo será desenvolvido no Figma utilizando a aba **Prototype**.
+A tela de login será composta por:
 
-Serão configuradas interações para demonstrar os diferentes estados dos componentes, incluindo a alteração visual dos botões ao passar o cursor e o fluxo de autenticação.
+* Logotipo ou nome **Nova-Web**;
+* Título da página;
+* Campo de E-mail;
+* Campo de Senha;
+* Opção de mostrar ou ocultar senha;
+* Checkbox "Lembrar de mim";
+* Link "Esqueci minha senha";
+* Botão principal "Entrar";
+* Divisor visual;
+* Link "Criar conta".
 
-Também será criado um estado de erro de autenticação contendo a mensagem:
+A estrutura será centralizada e organizada para facilitar a compreensão e utilização.
 
-> E-mail ou senha inválidos.
+---
 
-O objetivo é demonstrar como a interface responde às ações do usuário e fornece feedback durante a utilização do formulário.
+# 6. Identidade Visual
+
+A tela de login seguirá a identidade visual já definida para o projeto Nova-Web.
+
+### Paleta de cores
+
+* **Branco quente:** `#FFFDF9`
+* **Bege:** `#EDE1D3`
+* **Rosa queimado:** `#C98291`
+
+### Tipografia
+
+* **DM Serif Display:** utilizada no nome da aplicação e títulos;
+* **Poppins:** utilizada em labels, campos, botões, links e textos.
+
+A interface terá uma aparência limpa, delicada, moderna e organizada.
+
+---
+
+# 7. Protótipo Interativo
+
+No Figma será criada uma segunda versão da tela representando o estado de erro de autenticação.
+
+O fluxo principal será:
+
+```text
+Tela de Login
+      ↓
+   Entrar
+      ↓
+Tela de Login — Erro
+```
+
+Na tela de erro será apresentada a mensagem:
+
+**E-mail ou senha inválidos.**
+
+Também serão configuradas interações para demonstrar os estados dos componentes.
+
+Os componentes interativos podem utilizar variantes para realizar mudanças de estado dentro do próprio protótipo. O Figma permite utilizar a ação **"Mudar para"** para conectar variantes de um mesmo conjunto de componentes.
+
+---
+
+# 8. Configuração do Frame e Grid
+
+O protótipo será desenvolvido inicialmente em um frame:
+
+**Desktop — 1440 × 900 px**
+
+Será utilizado um sistema de grid com:
+
+* 12 colunas;
+* Gutter de 24 px;
+* Margens de 80 px.
+
+O grid será utilizado para auxiliar no alinhamento e na organização dos elementos.
+
+---
+
+# 9. Objetivo do Projeto
+
+O objetivo do projeto é desenvolver uma tela de login de alta fidelidade para o Nova-Web, aplicando princípios de UI/UX, usabilidade e acessibilidade.
+
+A interface deverá apresentar uma estrutura clara, componentes reutilizáveis, diferentes estados de interação e um protótipo funcional no Figma.
+
+A documentação apresentada neste README servirá como base para as decisões tomadas durante a construção do protótipo.
+
+---
+
+# 10. Referências
+
+* **W3C — WCAG 2.2: Labels ou Instruções**
+  https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions
+
+* **W3C — WCAG 2.2: Contraste Mínimo**
+  https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum
+
+* **W3C — WCAG 2.2: Foco Visível**
+  https://www.w3.org/WAI/WCAG22/Understanding/focus-visible
+
+* **W3C — WAI: Labeling Controls**
+  https://www.w3.org/WAI/tutorials/forms/labels/
+
+* **Figma Learn — Guia de componentes**
+  https://help.figma.com/hc/pt-br/articles/360038662654-Guia-de-componentes-no-Figma
+
+* **Figma Learn — Criar e usar variantes**
+  https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants
+
+* **Figma Learn — Layout automático**
+  https://help.figma.com/hc/pt-br/articles/360040451373-Guia-do-layout-automático
+
+* **Figma Learn — Componentes interativos com variantes**
+  https://help.figma.com/hc/pt-br/articles/360061175334-Criar-componentes-interativos-com-variantes
