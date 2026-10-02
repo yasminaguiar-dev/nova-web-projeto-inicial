@@ -1,100 +1,152 @@
-# Nova Web
+# Projeto Nova-Web - Especificações de UI/UX (Tela de Login)
 
-## Descrição do Projeto
+## 1. Conceitos de Usabilidade em Formulários
 
-Projeto de desenvolvimento de um site para uma loja de roupas, com o objetivo de apresentar produtos de forma organizada, atrativa e de fácil navegação.
+### Labels vs. Placeholders
 
-O projeto contempla as categorias de **Vestidos, Blusas, Calças e Acessórios**, além das páginas de **Home, Produtos e Contato**.
+As **labels** devem ser utilizadas para identificar de forma clara o que deve ser preenchido em cada campo. O placeholder serve apenas como uma orientação ou exemplo de preenchimento.
 
-## Objetivo
+Não é recomendado utilizar o placeholder como substituto da label, pois o texto desaparece quando o usuário começa a digitar. Isso pode dificultar a identificação do campo e prejudicar a acessibilidade, principalmente para usuários que precisam de mais tempo para preencher o formulário.
 
-Desenvolver a estrutura inicial de um projeto web, organizando o planejamento, os wireframes, a identidade visual e os recursos necessários para as próximas etapas de desenvolvimento.
+Na tela de login, serão utilizadas labels como **"E-mail"** e **"Senha"**, mantendo a identificação dos campos sempre visível.
 
-## Estrutura do Projeto
+### Hierarquia Visual
 
-```text
-novaweb-projeto-inicial/
-├── assets/
-│   ├── css/
-│   ├── icons/
-│   └── images/
-│
-├── pages/
-│
-├── Guia_de_estilo_Inicial.md
-├── NOTAS_ESTUDO.md
-└── README.md
-```
+A hierarquia visual ajuda o usuário a identificar quais ações são mais importantes na tela.
 
-## EAP — Estrutura Analítica do Projeto
+O botão **Primary**, representado pela ação **"Entrar"**, terá maior destaque visual, pois é a principal ação da tela de login.
 
-| Etapa | Atividade                                |
-| ----- | ---------------------------------------- |
-| 1     | Planejamento do projeto                  |
-| 1.1   | Definição do escopo                      |
-| 1.2   | Levantamento das necessidades            |
-| 2     | Arquitetura de informação                |
-| 2.1   | Organização das páginas                  |
-| 2.2   | Definição das categorias de produtos     |
-| 3     | Identidade visual                        |
-| 3.1   | Definição da paleta de cores             |
-| 3.2   | Definição da tipografia                  |
-| 3.3   | Criação do Guia de Estilo                |
-| 4     | Organização dos recursos                 |
-| 4.1   | Seleção das imagens                      |
-| 4.2   | Seleção dos ícones                       |
-| 4.3   | Organização das pastas                   |
-| 5     | Preparação para desenvolvimento          |
-| 5.1   | Organização do repositório               |
-| 5.2   | Preparação da estrutura para codificação |
+As ações secundárias, como **"Esqueci minha senha"** e **"Criar conta"**, terão um destaque visual menor, utilizando textos ou botões com aparência secundária.
 
-## Cronograma
+Dessa forma, o usuário consegue identificar rapidamente a ação principal sem confundir as diferentes opções disponíveis.
 
-| Etapa | Atividade                          | Situação      |
-| ----- | ---------------------------------- | ------------- |
-| 1     | Planejamento e definição do escopo | Concluído     |
-| 2     | EAP e organização das tarefas      | Concluído     |
-| 3     | Kanban e organização do projeto    | Concluído     |
-| 4     | Arquitetura de informação          | Concluído     |
-| 5     | Wireframes                         | Concluído     |
-| 6     | Identidade visual                  | Concluído     |
-| 7     | Organização de imagens e ícones    | Concluído     |
-| 8     | Preparação do repositório          | Concluído     |
-| 9     | Desenvolvimento HTML               | Próxima etapa |
+---
 
-## Wireframes
+## 2. Estados de Validação dos Campos de Entrada (Input States)
 
-Os wireframes do projeto foram desenvolvidos anteriormente e serão utilizados como referência para a próxima etapa de desenvolvimento.
+Os campos de entrada terão diferentes estados visuais para informar ao usuário a situação atual do preenchimento.
 
-### Visualização dos Wireframes
+### Default (Padrão)
 
-![Wireframes do projeto](docs/wireframes/Wiframe%20projeto.png)
+O campo terá uma **borda neutra**, fundo claro e uma label visível. Esse será o estado inicial do campo antes de o usuário interagir com ele.
 
-**Pasta dos wireframes:** `docs/wireframes/`
+### Focus (Foco)
 
-## Identidade Visual
+Quando o usuário selecionar o campo, ele receberá um **destaque visual**, como uma alteração na cor da borda ou um anel de foco.
 
-A identidade visual do projeto utiliza:
+Esse destaque ajuda o usuário a identificar qual campo está ativo no momento.
 
-* **60% — Branco quente:** `#FFFDF9`
-* **30% — Bege suave:** `#EDE1D3`
-* **10% — Rosa queimado:** `#C98291`
+### Error (Erro)
 
-### Tipografia
+Quando houver um preenchimento incorreto, o campo terá a **borda em tom vermelho** e será apresentada uma mensagem explicativa abaixo do campo.
 
-* **Títulos:** DM Serif Display
-* **Textos:** Poppins
+Exemplo:
 
-As escolhas foram documentadas no arquivo `Guia_de_estilo_Inicial.md`.
+> E-mail ou senha inválidos.
 
-## Recursos
+A mensagem deverá informar o problema de maneira clara, ajudando o usuário a corrigi-lo.
 
-Os recursos visuais do projeto estão organizados em:
+### Success (Sucesso)
 
-* `assets/images/` — imagens dos produtos;
-* `assets/icons/` — ícones utilizados no projeto;
-* `assets/css/` — arquivos de estilização.
+Quando o campo for preenchido corretamente, será apresentado um **indicador visual de sucesso**, como uma alteração na cor da borda ou um ícone de confirmação.
 
-## Próxima Etapa
+Esse estado informa ao usuário que o preenchimento foi aceito.
 
-Após a conclusão da documentação e organização do projeto, o repositório está preparado para receber a codificação das páginas HTML e a implementação da identidade visual definida.
+### Disabled (Desabilitado)
+
+Quando um campo ou botão estiver indisponível, será utilizado um **contraste reduzido**, deixando claro que o elemento não pode ser utilizado naquele momento.
+
+O elemento continuará identificável, mas terá uma aparência visual diferente dos elementos ativos.
+
+---
+
+## 3. Padrões de Acessibilidade
+
+A tela de login deverá seguir boas práticas de acessibilidade para facilitar a utilização por diferentes usuários.
+
+### Contraste de Cores
+
+As cores utilizadas para textos, campos e botões deverão apresentar contraste suficiente entre o primeiro plano e o fundo.
+
+Será buscado o contraste mínimo recomendado pelas diretrizes **WCAG**, garantindo que os textos e informações importantes sejam fáceis de visualizar.
+
+Além da cor, os estados de erro e sucesso também utilizarão mensagens ou indicadores visuais, evitando depender somente da diferença de cores.
+
+### Navegação por Teclado
+
+Os elementos da tela deverão seguir uma ordem lógica de navegação utilizando a tecla **Tab**.
+
+O usuário deverá conseguir acessar os campos de e-mail e senha, o checkbox, os links e o botão de login sem precisar utilizar o mouse.
+
+### Leitores de Tela
+
+Os campos deverão possuir labels claras e informações compreensíveis para usuários que utilizam leitores de tela.
+
+As mensagens de erro também deverão explicar de forma objetiva o problema encontrado, permitindo que o usuário entenda o que precisa ser corrigido.
+
+---
+
+## 4. Estrutura da Tela de Login
+
+A tela de login do projeto Nova-Web será composta pelos seguintes elementos:
+
+* Logotipo ou nome da aplicação;
+* Título da tela;
+* Campo de e-mail/usuário;
+* Campo de senha;
+* Opção para exibir ou ocultar a senha;
+* Checkbox "Lembrar de mim";
+* Link "Esqueci minha senha";
+* Botão principal "Entrar";
+* Divisor visual para outras formas de acesso;
+* Opção para criar uma conta.
+
+A interface seguirá a identidade visual definida para o projeto Nova-Web, mantendo uma aparência simples, organizada e consistente.
+
+---
+
+## 5. Componentes e Variantes no Figma
+
+No Figma serão criados componentes reutilizáveis para a tela de login.
+
+### Componente de Input
+
+O componente de campo de texto possuirá as seguintes variantes:
+
+* Default;
+* Focus;
+* Error;
+* Success.
+
+Cada variante apresentará o estado visual correspondente e poderá possuir um texto de apoio ou mensagem de erro.
+
+### Componente de Botão
+
+O componente de botão possuirá:
+
+**Tipo:**
+
+* Primary;
+* Secondary/Outline.
+
+**Estado:**
+
+* Default;
+* Hover;
+* Disabled.
+
+O botão Primary será utilizado para a ação principal **"Entrar"**, enquanto o botão Secondary será utilizado para ações de menor prioridade.
+
+---
+
+## 6. Protótipo Interativo
+
+O protótipo será desenvolvido no Figma utilizando a aba **Prototype**.
+
+Serão configuradas interações para demonstrar os diferentes estados dos componentes, incluindo a alteração visual dos botões ao passar o cursor e o fluxo de autenticação.
+
+Também será criado um estado de erro de autenticação contendo a mensagem:
+
+> E-mail ou senha inválidos.
+
+O objetivo é demonstrar como a interface responde às ações do usuário e fornece feedback durante a utilização do formulário.
