@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Perfil</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="cartao">
+        <h1>Meu Perfil</h1>
+        <p class="subtitulo">Preencha seus dados pessoais</p>
+
+        <img src="fotos/neymar.avif" alt="Foto de perfil" id="fotoPerfil">
+
+        <p id="mensagem" class="mensagem" hidden></p>
+
+        <form id="formPerfil">
+
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome"
+                   placeholder="Digite seu nome" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf"
+                   placeholder="000.000.000-00"
+                   maxlength="14" inputmode="numeric" required>
+
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+
+            <fieldset>
+                <legend>Tipo de perfil:</legend>
+
+                <label class="opcao">
+                    <input type="radio" name="tipoPerfil" value="Cliente">
+                    Cliente
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="tipoPerfil" value="Administrador">
+                    Administrador
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quais são seus interesses?</legend>
+
+                <label class="opcao">
+                    <input type="checkbox" name="interesses" value="Roupas">
+                    Roupas
+                </label>
+
+                <label class="opcao">
+                    <input type="checkbox" name="interesses" value="Calçados">
+                    Calçados
+                </label>
+
+                <label class="opcao">
+                    <input type="checkbox" name="interesses" value="Acessórios">
+                    Acessórios
+                </label>
+            </fieldset>
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="">Selecione seu estado</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+            </select>
+
+            <label for="descricao">Sobre você:</label>
+            <textarea id="descricao" name="descricao"
+                      rows="4" maxlength="300"
+                      placeholder="Conte um pouco sobre você (opcional)"></textarea>
+
+            <p class="dica">Máximo de 300 caracteres.</p>
+
+            <button type="submit">Salvar perfil</button>
+
+        </form>
+    </main>
+
+</body>
+</html>
