@@ -1,0 +1,88 @@
+```css
+/*
+Descricao: Estilizacao do formulario utilizando CSS e pseudo-classes.
+nome_arquivo: estilo.css
+nome_exercicio: Aula 14 - CSS para Formularios
+nome_aluno: Yasmin Ferreira Aguiar
+email_aluno: yasmin.aguiar@portalsesisp.ogr.br
+turma: TDE-1BAA-26
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0f2;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #d8cdd1;
+}
+
+h1 {
+    text-align: center;
+    color: #a34f6a;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Quando o campo recebe foco */
+input:focus {
+    outline: none;
+    border: 2px solid #a34f6a;
+    background-color: #fff8fa;
+}
+
+/* Quando o campo esta desabilitado */
+input:disabled {
+    background-color: #e8e8e8;
+    cursor: not-allowed;
+}
+
+/* Quando o valor do campo e valido */
+input:valid {
+    border-color: #4b9b68;
+}
+
+/* Quando o valor do campo e invalido */
+input:invalid {
+    border-color: #d9534f;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #a34f6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #843d54;
+}
+```
