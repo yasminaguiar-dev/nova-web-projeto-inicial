@@ -1,0 +1,78 @@
+```css
+/*
+    Descricao: Formulario de cadastro com JavaScript.
+    nome_arquivo: index.html
+    nome_exercicio: Aula 15 - JavaScript aplicado a Formularios
+    nome_aluno: Yasmin Ferreira Aguiar
+    email_aluno: yasmin.aguiar@portalsesisp.org.br
+    turma: TDE-1BAA-26
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0f2;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #d8cdd1;
+}
+
+h1 {
+    text-align: center;
+    color: #a34f6a;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #a34f6a;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #a34f6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #843d54;
+}
+
+#mensagem {
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #e1f5e5;
+    color: #246b38;
+    border: 1px solid #a5d6b0;
+    border-radius: 5px;
+}
+
+#mensagem[hidden] {
+    display: none;
+}
+```
