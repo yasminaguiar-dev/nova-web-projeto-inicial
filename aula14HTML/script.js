@@ -1,4 +1,3 @@
-```javascript
 /*
 Descricao: Habilitar e desabilitar um campo do formulario.
 nome_arquivo: script.js
@@ -19,4 +18,3 @@ botao.addEventListener("click", function() {
 campo.addEventListener("blur", function() {
     campo.disabled = true;
 });
-```
