@@ -1,0 +1,77 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 16 - Página Administrativa</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!--
+    Descricao: Pagina administrativa com integracao entre tabela e formulario.
+    nome_arquivo: index.html
+    nome_exercicio: Aula 16 - Integracao de Componentes de Interface
+    nome_aluno: Yasmin Ferreira Aguiar
+    email_aluno: yasmin.aguiar@portalsesisp.org.br
+    turma: TDE-1BAA-26
+    -->
+
+    <main class="container">
+        <h1>Painel Administrativo</h1>
+        <p>Clique em um usuario da tabela para visualizar seus dados.</p>
+
+        <h2>Usuarios cadastrados</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelaUsuarios">
+                <tr onclick="selecionarUsuario(this)">
+                    <td>Ana Silva</td>
+                    <td>ana@email.com</td>
+                    <td>Curitiba</td>
+                </tr>
+
+                <tr onclick="selecionarUsuario(this)">
+                    <td>Joao Santos</td>
+                    <td>joao@email.com</td>
+                    <td>Maringa</td>
+                </tr>
+
+                <tr onclick="selecionarUsuario(this)">
+                    <td>Maria Oliveira</td>
+                    <td>maria@email.com</td>
+                    <td>Londrina</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Dados do usuario</h2>
+
+        <form id="formulario">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" required>
+
+            <button type="submit">Salvar alteracoes</button>
+            <p id="mensagem" role="status"></p>
+        </form>
+    </main>
+
+</body>
+</html>
+```

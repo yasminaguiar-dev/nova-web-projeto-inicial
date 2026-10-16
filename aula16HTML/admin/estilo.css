@@ -1,0 +1,184 @@
+```css
+/*
+Descricao: Estilizacao delicada do painel administrativo.
+nome_arquivo: estilo.css
+nome_exercicio: Aula 16 - Integracao de Componentes de Interface
+nome_aluno: Yasmin Ferreira Aguiar
+email_aluno: yasmin.aguiar@portalsesisp.org.br
+turma: TDE-1BAA-26
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #FFFDF9;
+    background-image: radial-gradient(#F3DCE2 1px, transparent 1px);
+    background-size: 22px 22px;
+    margin: 0;
+    padding: 35px 20px;
+    color: #5D454D;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    background-color: #FFFFFF;
+    border: 1px solid #F0DDE2;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px #C982911A;
+}
+
+h1 {
+    text-align: center;
+    color: #A85F75;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h1::before {
+    content: "♡ ";
+}
+
+h1::after {
+    content: " ♡";
+}
+
+h2 {
+    color: #A85F75;
+    font-family: Georgia, serif;
+    margin-top: 30px;
+}
+
+p {
+    color: #927680;
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    overflow: hidden;
+    border: 1px solid #F0DDE2;
+    border-radius: 12px;
+}
+
+th {
+    background-color: #C98291;
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-weight: normal;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #F5E8EB;
+}
+
+tbody tr {
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #FFFAFB;
+}
+
+tbody tr:hover {
+    background-color: #FCEAF0;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    color: #8F596A;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #E8CBD4;
+    border-radius: 10px;
+    background-color: #FFFCFD;
+    color: #5D454D;
+    font: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: #C2A5AE;
+}
+
+input:focus {
+    outline: none;
+    border-color: #C98291;
+    box-shadow: 0 0 0 3px #F8E8EC;
+    background-color: #FFFFFF;
+}
+
+button {
+    margin-top: 22px;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 10px;
+    background-color: #C98291;
+    color: #FFFFFF;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #AD6579;
+    transform: translateY(-1px);
+}
+
+#mensagem {
+    margin-top: 15px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background-color: #F8E8EC;
+    color: #92546A;
+    border: 1px solid #EACBD5;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 9px 6px;
+        overflow-wrap: anywhere;
+    }
+}
+```
