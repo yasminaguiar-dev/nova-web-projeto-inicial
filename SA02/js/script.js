@@ -78,3 +78,58 @@ if (formPerfil) {
     });
 
 }
+
+/* =====================================
+   PESQUISA DE USUARIOS
+===================================== */
+
+const campoPesquisa = document.getElementById("pesquisa");
+const tabelaUsuarios = document.getElementById("tabela-usuarios");
+const mensagemPesquisa = document.getElementById("mensagem-pesquisa");
+
+if (campoPesquisa && tabelaUsuarios && mensagemPesquisa) {
+
+    campoPesquisa.addEventListener("input", function() {
+
+        const textoPesquisa = campoPesquisa.value.toLowerCase().trim();
+
+        const linhas = tabelaUsuarios.querySelectorAll("tbody tr");
+
+        let quantidadeEncontrada = 0;
+
+        linhas.forEach(function(linha) {
+
+            const informacoes = linha.textContent.toLowerCase();
+
+            if (informacoes.includes(textoPesquisa)) {
+
+                linha.style.display = "";
+
+                quantidadeEncontrada++;
+
+            } else {
+
+                linha.style.display = "none";
+
+            }
+
+        });
+
+        if (textoPesquisa === "") {
+
+            mensagemPesquisa.textContent = "";
+
+        } else if (quantidadeEncontrada === 0) {
+
+            mensagemPesquisa.textContent = "Nenhum usuario encontrado.";
+
+        } else {
+
+            mensagemPesquisa.textContent =
+                quantidadeEncontrada + " usuario(s) encontrado(s).";
+
+        }
+
+    });
+
+}
