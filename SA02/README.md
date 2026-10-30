@@ -1,6 +1,6 @@
 # Projeto NovaWeb - Sistema Administrativo
 
-**Desenvolvedora:** Yasmin Aguiar  
+**Desenvolvedora:** Yasmin Ferreira Aguiar  
 **Curso:** Técnico em Desenvolvimento de Sistemas  
 **Instituição:** SENAI  
 **Turma:** TDE1BAA-26  

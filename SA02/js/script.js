@@ -3,8 +3,8 @@
 Descricao: Validação dos formulários e pesquisa de usuários do sistema NovaWeb.
 nome_arquivo: script.js
 nome_exercicio: SA02 - Sistema Administrativo NovaWeb
-nome_aluno: Yasmin Aguiar
-email_aluno:
+nome_aluno: Yasmin Ferreira Aguiar
+email_aluno: yasmin.aguiar@portalsesisp.org.br
 turma: TDE1BAA-26
 */
 
