@@ -1,53 +1,50 @@
 
 /*
-    Descricao: Funcoes JavaScript do sistema NovaWeb
-    nome_arquivo: script.js
-    nome_exercicio: Situacao de Aprendizagem 02
-    nome_aluno: Yasmin Aguiar
-    email_aluno:
-    turma: TDE1BAA-26
+Descricao: Validação dos formulários e pesquisa de usuários do sistema NovaWeb.
+nome_arquivo: script.js
+nome_exercicio: SA02 - Sistema Administrativo NovaWeb
+nome_aluno: Yasmin Aguiar
+email_aluno:
+turma: TDE1BAA-26
 */
 
-/* =====================================
-   FORMULARIO DE LOGIN
-===================================== */
 
-const formLogin = document.getElementById("form-login");
+/* VALIDAÇÃO DO LOGIN */
 
-if (formLogin) {
+const formularioLogin = document.getElementById("form-login");
 
-    formLogin.addEventListener("submit", function(event) {
+if (formularioLogin) {
+
+    formularioLogin.addEventListener("submit", function(event) {
 
         event.preventDefault();
 
         const email = document.getElementById("email").value;
         const senha = document.getElementById("senha").value;
 
-        if (email.trim() === "" || senha.trim() === "") {
+        if (email === "" || senha === "") {
 
-            alert("Por favor, preencha todos os campos.");
-
-        } else {
-
-            alert("Login realizado com sucesso! Bem-vindo(a) ao NovaWeb.");
-
-            window.location.href = "perfil.html";
+            alert("Preencha todos os campos!");
+            return;
 
         }
+
+        alert("Login realizado com sucesso!");
+
+        window.location.href = "perfil.html";
 
     });
 
 }
 
-/* =====================================
-   FORMULARIO DE PERFIL
-===================================== */
 
-const formPerfil = document.getElementById("form-perfil");
+/* VALIDAÇÃO DO PERFIL */
 
-if (formPerfil) {
+const formularioPerfil = document.getElementById("form-perfil");
 
-    formPerfil.addEventListener("submit", function(event) {
+if (formularioPerfil) {
+
+    formularioPerfil.addEventListener("submit", function(event) {
 
         event.preventDefault();
 
@@ -59,52 +56,49 @@ if (formPerfil) {
         const estado = document.getElementById("estado").value;
 
         if (
-            nome.trim() === "" ||
-            email.trim() === "" ||
-            cpf.trim() === "" ||
+            nome === "" ||
+            email === "" ||
+            cpf === "" ||
             nascimento === "" ||
             tipoUsuario === "" ||
             estado === ""
         ) {
 
-            alert("Por favor, preencha todos os campos obrigatorios.");
-
-        } else {
-
-            alert("Informacoes do perfil preenchidas com sucesso!");
+            alert("Preencha todos os campos obrigatórios!");
+            return;
 
         }
+
+        alert("Perfil cadastrado com sucesso!");
 
     });
 
 }
 
-/* =====================================
-   PESQUISA DE USUARIOS
-===================================== */
+
+/* PESQUISA NA TABELA DE USUÁRIOS */
 
 const campoPesquisa = document.getElementById("pesquisa");
-const tabelaUsuarios = document.getElementById("tabela-usuarios");
-const mensagemPesquisa = document.getElementById("mensagem-pesquisa");
 
-if (campoPesquisa && tabelaUsuarios && mensagemPesquisa) {
+if (campoPesquisa) {
 
     campoPesquisa.addEventListener("input", function() {
 
-        const textoPesquisa = campoPesquisa.value.toLowerCase().trim();
+        const pesquisa = campoPesquisa.value.toLowerCase();
 
-        const linhas = tabelaUsuarios.querySelectorAll("tbody tr");
+        const tabela = document.getElementById("tabela-usuarios");
+        const linhas = tabela.querySelectorAll("tbody tr");
+        const mensagem = document.getElementById("mensagem-pesquisa");
 
         let quantidadeEncontrada = 0;
 
         linhas.forEach(function(linha) {
 
-            const informacoes = linha.textContent.toLowerCase();
+            const texto = linha.textContent.toLowerCase();
 
-            if (informacoes.includes(textoPesquisa)) {
+            if (texto.includes(pesquisa)) {
 
                 linha.style.display = "";
-
                 quantidadeEncontrada++;
 
             } else {
@@ -115,18 +109,14 @@ if (campoPesquisa && tabelaUsuarios && mensagemPesquisa) {
 
         });
 
-        if (textoPesquisa === "") {
+        if (quantidadeEncontrada === 0) {
 
-            mensagemPesquisa.textContent = "";
-
-        } else if (quantidadeEncontrada === 0) {
-
-            mensagemPesquisa.textContent = "Nenhum usuario encontrado.";
+            mensagem.textContent = "Nenhum usuário encontrado.";
 
         } else {
 
-            mensagemPesquisa.textContent =
-                quantidadeEncontrada + " usuario(s) encontrado(s).";
+            mensagem.textContent =
+                quantidadeEncontrada + " usuário(s) encontrado(s).";
 
         }
 

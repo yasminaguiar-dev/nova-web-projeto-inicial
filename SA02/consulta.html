@@ -1,22 +1,20 @@
 
-<!DOCTYPE html>
 <!--
-    Descricao: Pagina de consultas e registros do sistema NovaWeb
-    nome_arquivo: consulta.html
-    nome_exercicio: Situacao de Aprendizagem 02
-    nome_aluno: Yasmin Aguiar
-    email_aluno:
-    turma: TDE1BAA-26
+Descricao: Página de consulta e pesquisa dos usuários do sistema.
+nome_arquivo: consulta.html
+nome_exercicio: SA02 - Sistema Administrativo NovaWeb
+nome_aluno: Yasmin Aguiar
+email_aluno:
+turma: TDE1BAA-26
 -->
 
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Consultas | NovaWeb</title>
-
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
@@ -36,50 +34,46 @@
 
     <main class="pagina-conteudo">
 
-        <section class="titulo-pagina">
+        <section class="cabecalho-consulta">
 
-            <h2>Consultas</h2>
+            <div>
+                <h2 class="titulo-pagina">Consulta de Usuários</h2>
 
-            <p>Consulte e pesquise os registros cadastrados no sistema.</p>
+                <p>
+                    Consulte e pesquise os usuários cadastrados no sistema.
+                </p>
+            </div>
+
+            <img
+                src="assets/images/consulta-ilustration.png"
+                alt="Ilustração de consulta de informações"
+                class="imagem-consulta"
+            >
 
         </section>
 
         <section class="container-consulta">
 
-            <div class="cabecalho-consulta">
+            <label for="pesquisa">Pesquisar usuário</label>
 
-                <h3>Registros de usuários</h3>
-
-                <p>Confira as informações disponíveis na tabela.</p>
-
-            </div>
-
-            <div class="campo-pesquisa">
-
-                <label for="pesquisa">Pesquisar usuário</label>
-
-                <input
-                    type="text"
-                    id="pesquisa"
-                    name="pesquisa"
-                    placeholder="Digite um nome ou e-mail..."
-                >
-
-            </div>
+            <input
+                type="text"
+                id="pesquisa"
+                class="campo-pesquisa"
+                placeholder="Digite um nome, e-mail ou tipo de usuário..."
+            >
 
             <div class="tabela-responsiva">
 
                 <table id="tabela-usuarios">
 
                     <thead>
-
                         <tr>
                             <th>Nome</th>
                             <th>E-mail</th>
                             <th>Tipo de usuário</th>
                             <th>Estado</th>
                         </tr>
-
                     </thead>
 
                     <tbody>
@@ -127,5 +121,4 @@
     <script src="js/script.js"></script>
 
 </body>
-
 </html>

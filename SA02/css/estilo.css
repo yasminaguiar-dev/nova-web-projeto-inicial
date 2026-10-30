@@ -1,16 +1,14 @@
 
 /*
-    Descricao: Estilizacao das paginas do sistema NovaWeb
-    nome_arquivo: estilo.css
-    nome_exercicio: Situacao de Aprendizagem 02
-    nome_aluno: Yasmin Aguiar
-    email_aluno:
-    turma: TDE1BAA-26
+Descricao: Estilização das páginas do sistema administrativo NovaWeb.
+nome_arquivo: estilo.css
+nome_exercicio: SA02 - Sistema Administrativo NovaWeb
+nome_aluno: Yasmin Aguiar
+email_aluno:
+turma: TDE1BAA-26
 */
 
-/* =====================================
-   CONFIGURACOES GERAIS
-===================================== */
+/* CONFIGURAÇÕES GERAIS */
 
 * {
     margin: 0;
@@ -21,105 +19,116 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #FFFDF9;
-    color: #4A3D3F;
+    color: #51433F;
+    line-height: 1.6;
 }
 
-/* =====================================
-   TELA DE LOGIN
-===================================== */
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+}
+
+/* TELA DE LOGIN */
 
 .pagina-login {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px 15px;
 }
 
 .container-login {
-    width: 100%;
-    max-width: 420px;
     background-color: #FFFFFF;
-    padding: 40px;
-    border-radius: 16px;
-    border: 1px solid #EDE1D3;
-    box-shadow: 0 8px 25px rgba(74, 61, 63, 0.08);
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
 }
 
 .cabecalho-login {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .cabecalho-login h1 {
     color: #C98291;
-    font-size: 34px;
-    margin-bottom: 10px;
+    font-size: 32px;
 }
 
 .cabecalho-login p {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.cabecalho-login span {
+    color: #776966;
     font-size: 14px;
-    color: #827477;
 }
 
-/* =====================================
-   CAMPOS DOS FORMULARIOS
-===================================== */
+.imagem-login {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto 25px;
+}
+
+/* CAMPOS DOS FORMULÁRIOS */
 
 .campo-formulario {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .campo-formulario label {
-    font-size: 14px;
+    display: block;
+    margin-bottom: 7px;
     font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.campo-formulario input {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #D8C9C2;
-    border-radius: 8px;
     font-size: 14px;
-    outline: none;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E2D5CE;
+    border-radius: 7px;
     background-color: #FFFDF9;
+    color: #51433F;
+    font-size: 14px;
 }
 
-.campo-formulario input:focus {
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    outline: none;
     border-color: #C98291;
-    box-shadow: 0 0 0 3px rgba(201, 130, 145, 0.15);
+    box-shadow: 0 0 4px rgba(201, 130, 145, 0.3);
 }
 
-/* =====================================
-   OPCOES DO LOGIN
-===================================== */
+.campo-formulario textarea {
+    resize: vertical;
+}
+
+/* OPÇÕES DO LOGIN */
 
 .opcoes-login {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     font-size: 13px;
 }
 
 .opcoes-login label {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
 }
 
 .opcoes-login a {
-    color: #B66D7D;
+    color: #B96F80;
     text-decoration: none;
 }
 
@@ -127,45 +136,37 @@ body {
     text-decoration: underline;
 }
 
-/* =====================================
-   BOTOES
-===================================== */
+/* BOTÕES */
 
 .botao-login {
     width: 100%;
-    padding: 14px;
+    padding: 13px;
     border: none;
-    border-radius: 8px;
+    border-radius: 7px;
     background-color: #C98291;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .botao-login:hover {
-    background-color: #B66D7D;
+    background-color: #B96F80;
 }
-
-/* =====================================
-   RODAPE DO LOGIN
-===================================== */
 
 .rodape-login {
     text-align: center;
     margin-top: 25px;
+    color: #8A7B75;
     font-size: 12px;
-    color: #827477;
 }
 
-/* =====================================
-   CABECALHO DO SISTEMA
-===================================== */
+/* CABEÇALHO DO SISTEMA */
 
 .cabecalho-sistema {
     background-color: #EDE1D3;
-    padding: 20px 8%;
+    padding: 20px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -174,148 +175,136 @@ body {
 }
 
 .cabecalho-sistema h1 {
-    color: #C98291;
-    font-size: 28px;
+    color: #B96F80;
+    font-size: 27px;
 }
 
 .cabecalho-sistema nav {
     display: flex;
-    gap: 25px;
     flex-wrap: wrap;
+    gap: 22px;
 }
 
 .cabecalho-sistema nav a {
-    color: #4A3D3F;
+    color: #51433F;
     text-decoration: none;
-    font-size: 14px;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .cabecalho-sistema nav a:hover {
-    color: #B66D7D;
+    color: #B96F80;
 }
 
-/* =====================================
-   CONTEUDO DAS PAGINAS
-===================================== */
+/* CONTEÚDO DAS PÁGINAS */
 
 .pagina-conteudo {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 40px auto;
 }
 
 .titulo-pagina {
-    margin-bottom: 25px;
+    color: #B96F80;
+    font-size: 27px;
+    margin-bottom: 10px;
 }
 
-.titulo-pagina h2 {
-    color: #B66D7D;
-    font-size: 28px;
-    margin-bottom: 8px;
-}
-
-.titulo-pagina p {
-    color: #827477;
-    font-size: 14px;
-}
-
-/* =====================================
-   FORMULARIO DE PERFIL
-===================================== */
+/* PÁGINA DE PERFIL */
 
 .container-perfil {
-    background-color: #FFFFFF;
-    padding: 35px;
-    border: 1px solid #EDE1D3;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(74, 61, 63, 0.06);
-}
-
-.container-perfil select,
-.container-perfil textarea {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #D8C9C2;
-    border-radius: 8px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    background-color: #FFFDF9;
-    color: #4A3D3F;
-}
-
-.container-perfil select:focus,
-.container-perfil textarea:focus {
-    outline: none;
-    border-color: #C98291;
-    box-shadow: 0 0 0 3px rgba(201, 130, 145, 0.15);
-}
-
-.container-perfil input[type="checkbox"] {
-    accent-color: #C98291;
-}
-
-.container-perfil textarea {
-    resize: vertical;
-}
-
-/* =====================================
-   PAGINA DE CONSULTAS
-===================================== */
-
-.container-consulta {
-    background-color: #FFFFFF;
+    max-width: 650px;
+    margin: 25px auto;
     padding: 30px;
-    border: 1px solid #EDE1D3;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(74, 61, 63, 0.06);
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
-.cabecalho-consulta {
+.container-perfil h3 {
+    text-align: center;
+    color: #B96F80;
+    margin-bottom: 5px;
+}
+
+.container-perfil > p {
+    text-align: center;
+    color: #776966;
+    font-size: 14px;
     margin-bottom: 25px;
 }
 
-.cabecalho-consulta h3 {
-    color: #B66D7D;
-    font-size: 20px;
-    margin-bottom: 8px;
+.imagem-avatar {
+    display: block;
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+}
+
+.grupo-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.grupo-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+}
+
+/* PÁGINA DE CONSULTAS */
+
+.cabecalho-consulta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
 }
 
 .cabecalho-consulta p {
-    color: #827477;
-    font-size: 14px;
+    color: #776966;
 }
 
-/* Campo de pesquisa */
-
-.campo-pesquisa {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
+.imagem-consulta {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    object-fit: contain;
 }
 
-.campo-pesquisa label {
-    font-size: 14px;
+.container-consulta {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.container-consulta > label {
+    display: block;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
-.campo-pesquisa input {
+.campo-pesquisa {
     width: 100%;
     padding: 13px;
-    border: 1px solid #D8C9C2;
-    border-radius: 8px;
-    font-size: 14px;
+    margin-bottom: 22px;
+    border: 1px solid #E2D5CE;
+    border-radius: 7px;
     background-color: #FFFDF9;
+    font-size: 14px;
+}
+
+.campo-pesquisa:focus {
     outline: none;
-}
-
-.campo-pesquisa input:focus {
     border-color: #C98291;
-    box-shadow: 0 0 0 3px rgba(201, 130, 145, 0.15);
 }
 
-/* Tabela de usuarios */
+/* TABELA */
 
 .tabela-responsiva {
     width: 100%;
@@ -330,31 +319,26 @@ body {
 
 #tabela-usuarios th {
     background-color: #EDE1D3;
-    color: #4A3D3F;
-    padding: 15px;
-    font-size: 14px;
+    color: #51433F;
+    padding: 14px;
 }
 
 #tabela-usuarios td {
-    padding: 15px;
+    padding: 14px;
     border-bottom: 1px solid #EDE1D3;
-    font-size: 14px;
 }
 
 #tabela-usuarios tbody tr:hover {
-    background-color: #FFF8F7;
+    background-color: #FFF8F5;
 }
 
 .mensagem-pesquisa {
-    margin-top: 18px;
-    color: #B66D7D;
+    margin-top: 15px;
+    color: #B96F80;
     font-size: 14px;
-    font-weight: bold;
 }
 
-/* =====================================
-   RESPONSIVIDADE
-===================================== */
+/* RESPONSIVIDADE */
 
 @media (max-width: 600px) {
 
@@ -365,39 +349,46 @@ body {
 
     .cabecalho-sistema nav {
         justify-content: center;
-        gap: 15px;
     }
 
-    .container-perfil {
-        padding: 22px;
+    .cabecalho-consulta {
+        flex-direction: column;
+        text-align: center;
     }
 
+    .imagem-consulta {
+        max-width: 210px;
+    }
+
+    .container-perfil,
     .container-consulta {
         padding: 20px;
     }
 
-    .pagina-conteudo {
-        margin: 25px auto;
+    .grupo-checkbox {
+        flex-direction: column;
+        gap: 8px;
     }
 
-    #tabela-usuarios th,
-    #tabela-usuarios td {
-        padding: 10px;
-        font-size: 12px;
-    }
 }
 
 @media (max-width: 480px) {
 
     .container-login {
-        padding: 28px 22px;
+        padding: 25px 20px;
     }
 
     .cabecalho-login h1 {
-        font-size: 30px;
+        font-size: 27px;
+    }
+
+    .titulo-pagina {
+        font-size: 23px;
     }
 
     .opcoes-login {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
+
 }

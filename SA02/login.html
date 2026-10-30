@@ -1,88 +1,84 @@
 
-<!DOCTYPE html>
 <!--
-    Descricao: Tela de login do sistema administrativo NovaWeb
-    nome_arquivo: login.html
-    nome_exercicio: Situacao de Aprendizagem 02
-    nome_aluno: Yasmin Aguiar
-    email_aluno:
-    turma: TDE1BAA-26
+Descricao: Página de login do sistema administrativo NovaWeb.
+nome_arquivo: login.html
+nome_exercicio: SA02 - Sistema Administrativo NovaWeb
+nome_aluno: Yasmin Aguiar
+email_aluno:
+turma: TDE1BAA-26
 -->
 
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Login | NovaWeb</title>
-
-    <!-- Arquivo de estilização CSS -->
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
-<body>
+<body class="pagina-login">
 
-    <main class="pagina-login">
+    <main class="container-login">
 
-        <section class="container-login">
+        <header class="cabecalho-login">
+            <h1>NovaWeb</h1>
+            <p>Bem-vindo ao nosso sistema administrativo</p>
+        </header>
 
-            <header class="cabecalho-login">
-                <h1>NovaWeb</h1>
-                <p>Bem-vindo(a) de volta!</p>
-                <span>Acesse sua conta para continuar.</span>
-            </header>
+        <img
+            src="assets/images/login-ilustration.png"
+            alt="Ilustração da tela de login"
+            class="imagem-login"
+        >
 
-            <form id="form-login">
+        <form id="form-login">
 
-                <div class="campo-formulario">
-                    <label for="email">E-mail</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Digite seu e-mail"
-                        required
-                    >
-                </div>
+            <div class="campo-formulario">
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+            </div>
 
-                <div class="campo-formulario">
-                    <label for="senha">Senha</label>
-                    <input
-                        type="password"
-                        id="senha"
-                        name="senha"
-                        placeholder="Digite sua senha"
-                        required
-                    >
-                </div>
+            <div class="campo-formulario">
+                <label for="senha">Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+            </div>
 
-                <div class="opcoes-login">
-                    <label>
-                        <input type="checkbox" name="lembrar">
-                        Lembrar de mim
-                    </label>
+            <div class="opcoes-login">
 
-                    <a href="#" class="link-senha">Esqueceu a senha?</a>
-                </div>
+                <label>
+                    <input type="checkbox" id="lembrar">
+                    Lembrar de mim
+                </label>
 
-                <button type="submit" class="botao-login">
-                    Entrar
-                </button>
+                <a href="#">Esqueceu a senha?</a>
 
-            </form>
+            </div>
 
-            <footer class="rodape-login">
-                <p>NovaWeb - Sistema Administrativo</p>
-            </footer>
+            <button type="submit" class="botao-login">
+                Entrar
+            </button>
 
-        </section>
+        </form>
+
+        <footer class="rodape-login">
+            <p>NovaWeb - Sistema Administrativo</p>
+        </footer>
 
     </main>
 
-    <!-- Arquivo JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
-
 </html>
