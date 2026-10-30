@@ -8,32 +8,73 @@
     turma: TDE1BAA-26
 */
 
-// Seleciona o formulario de login
+/* =====================================
+   FORMULARIO DE LOGIN
+===================================== */
+
 const formLogin = document.getElementById("form-login");
 
-// Verifica o envio do formulario
-formLogin.addEventListener("submit", function(event) {
+if (formLogin) {
 
-    // Impede o envio tradicional do formulario
-    event.preventDefault();
+    formLogin.addEventListener("submit", function(event) {
 
-    // Captura os valores digitados
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
+        event.preventDefault();
 
-    // Verifica se os campos foram preenchidos
-    if (email.trim() === "" || senha.trim() === "") {
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
 
-        alert("Por favor, preencha todos os campos.");
+        if (email.trim() === "" || senha.trim() === "") {
 
-    } else {
+            alert("Por favor, preencha todos os campos.");
 
-        // Exibe uma mensagem de demonstracao
-        alert("Login realizado com sucesso! Bem-vindo(a) ao NovaWeb.");
+        } else {
 
-        // Direciona para a pagina de perfil
-        window.location.href = "perfil.html";
+            alert("Login realizado com sucesso! Bem-vindo(a) ao NovaWeb.");
 
-    }
+            window.location.href = "perfil.html";
 
-});
+        }
+
+    });
+
+}
+
+/* =====================================
+   FORMULARIO DE PERFIL
+===================================== */
+
+const formPerfil = document.getElementById("form-perfil");
+
+if (formPerfil) {
+
+    formPerfil.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email-perfil").value;
+        const cpf = document.getElementById("cpf").value;
+        const nascimento = document.getElementById("nascimento").value;
+        const tipoUsuario = document.getElementById("tipo-usuario").value;
+        const estado = document.getElementById("estado").value;
+
+        if (
+            nome.trim() === "" ||
+            email.trim() === "" ||
+            cpf.trim() === "" ||
+            nascimento === "" ||
+            tipoUsuario === "" ||
+            estado === ""
+        ) {
+
+            alert("Por favor, preencha todos os campos obrigatorios.");
+
+        } else {
+
+            alert("Informacoes do perfil preenchidas com sucesso!");
+
+        }
+
+    });
+
+}
