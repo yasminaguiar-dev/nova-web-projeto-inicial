@@ -1,0 +1,168 @@
+
+/*
+    Descricao: Estilizacao das paginas do sistema NovaWeb
+    nome_arquivo: estilo.css
+    nome_exercicio: Situacao de Aprendizagem 02
+    nome_aluno: Yasmin Aguiar
+    email_aluno:
+    turma: TDE1BAA-26
+*/
+
+/* Configuracoes gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFDF9;
+    color: #4A3D3F;
+}
+
+/* Pagina de login */
+
+.pagina-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Caixa principal */
+
+.container-login {
+    width: 100%;
+    max-width: 420px;
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #EDE1D3;
+    box-shadow: 0 8px 25px rgba(74, 61, 63, 0.08);
+}
+
+/* Cabecalho */
+
+.cabecalho-login {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cabecalho-login h1 {
+    color: #C98291;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.cabecalho-login p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.cabecalho-login span {
+    font-size: 14px;
+    color: #827477;
+}
+
+/* Campos do formulario */
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo-formulario input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #D8C9C2;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background-color: #FFFDF9;
+}
+
+.campo-formulario input:focus {
+    border-color: #C98291;
+    box-shadow: 0 0 0 3px rgba(201, 130, 145, 0.15);
+}
+
+/* Opcoes do login */
+
+.opcoes-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.opcoes-login label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.opcoes-login a {
+    color: #B66D7D;
+    text-decoration: none;
+}
+
+.opcoes-login a:hover {
+    text-decoration: underline;
+}
+
+/* Botao de entrar */
+
+.botao-login {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #C98291;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-login:hover {
+    background-color: #B66D7D;
+}
+
+/* Rodape */
+
+.rodape-login {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #827477;
+}
+
+/* Adaptacao para telas menores */
+
+@media (max-width: 480px) {
+    .container-login {
+        padding: 28px 22px;
+    }
+
+    .cabecalho-login h1 {
+        font-size: 30px;
+    }
+
+    .opcoes-login {
+        flex-wrap: wrap;
+    }
+}
